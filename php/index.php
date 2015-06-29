@@ -152,7 +152,7 @@ dispatch_post('/buy', function() {
 UPDATE stock SET order_id = :order_id
 WHERE variation_id = :variation_id
 AND order_id IS NULL
-ORDER BY RAND()
+ORDER BY ASC
 LIMIT 1
 SQL;
     $stmt = $db->prepare($sql);
